@@ -18,21 +18,6 @@ filemenu.add_command(label = "Open File...")
 filemenu.add_separator()
 filemenu.add_command(label = "Exit", command = lambda: root.destroy())
 
-
-# run_button = tk.Button(root, text = "Run")
-# run_button.place(x = 160, y = 40)
-
-# input_box = tk.Entry(width = 40)
-# input_box.place(x = 10, y = 10)
-
-# statusbar = tk.Label(root, text =  " No Data!!", bd = 1, relief = tk.SUNKEN, anchor = tk.W)
-# statusbar.pack(side = tk.BOTTOM, fill = tk.X)
-
-# temp = tk.Label(root, text=requests.get("https://sssumaa.net/api/status?element=tempreture&type=R").text)
-# temp.place(x= 50,y=50)
-
-
-
 calender = tk.LabelFrame(root,width=420, height=360,bg=BaseBackColor,bd=0)
 CL.calender(calender,25,BaseBackColor)
 calender.place(x=35,y=10)
