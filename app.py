@@ -3,6 +3,7 @@ import requests
 import calender11 as CL
 import DigitalClock as DC
 import weather
+import room
 
 BaseBackColor = "black"
 
@@ -58,28 +59,42 @@ humidity= tk.LabelFrame(root,width=155, height=35,bg=BaseBackColor,bd=0)
 weather.humidity(humidity,35,BaseBackColor)
 humidity.place(x=790,y=550)
 
+RoTemp= tk.LabelFrame(root,width=185, height=50,bg=BaseBackColor,bd=0)
+room.Temp(RoTemp,35,BaseBackColor)
+RoTemp.place(x=110,y=480)
+
+RoHum= tk.LabelFrame(root,width=185, height=50,bg=BaseBackColor,bd=0)
+room.Hum(RoHum,35,BaseBackColor)
+RoHum.place(x=110,y=540)
+
+
 wea = weather.reload()
 Digi = DC.reload()
+Room = room.reload()
 
 def startup():
     wea.setup()
     Digi.setup()
+    Room.setup()
     print("setup")
 
 def mini():
     wea.min()
     Digi.min()
+    Room.min()
     root.after(60000,mini)
     
 def secon():
     wea.second()
     Digi.second()
+    Room.second()
     root.after(1000,secon)
     
 
 def milisecond():
     wea.milisecond()
     Digi.milisecond()
+    Room.milisecond()
     root.after(100,milisecond)
 
 
