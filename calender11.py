@@ -28,7 +28,7 @@ def calender(master,size,basecolor):
             widget.destroy()
  
     ### ラベルに年月を設定
-    label = tkinter.Label(master=frame1, text=str(year) + "年" + str(month) + "月",  font=("游ゴシック",20),fg="white",bg=basecolor)
+    label = tkinter.Label(master=frame1, text=str(year) + "年" + str(month) + "月",  font=("游ゴシック",int(size*0.8)),fg="white",bg=basecolor)
  
     ### 年月表示
     label.pack()

@@ -1,5 +1,4 @@
 import tkinter as tk
-import requests
 import calender11 as CL
 import DigitalClock as DC
 import weather
@@ -8,7 +7,7 @@ import room
 BaseBackColor = "black"
 
 root = tk.Tk()
-root.geometry("1024x600")
+root.geometry("1920x1080")
 menubar = tk.Menu(root)
 root.configure(menu = menubar,bg=BaseBackColor)
 filemenu = tk.Menu(menubar, tearoff = 0)
@@ -19,53 +18,53 @@ filemenu.add_command(label = "Open File...")
 filemenu.add_separator()
 filemenu.add_command(label = "Exit", command = lambda: root.destroy())
 
-calender = tk.LabelFrame(root,width=420, height=360,bg=BaseBackColor,bd=0)
-CL.calender(calender,25,BaseBackColor)
-calender.place(x=35,y=10)
+calender = tk.LabelFrame(root,width=720, height=635,bg=BaseBackColor,bd=0)
+CL.calender(calender,40,BaseBackColor)
+calender.place(x=50,y=30)
 
-time = tk.LabelFrame(root,width=455, height=160,bg=BaseBackColor,bd=0)
-DC.Time(time,180,BaseBackColor)
-time.place(x=475,y=40)
+time = tk.LabelFrame(root,width=815, height=280,bg=BaseBackColor,bd=0)
+DC.Time(time,320,BaseBackColor)
+time.place(x=915,y=80)
 
-date = tk.LabelFrame(root,width=330, height=70,bg=BaseBackColor,bd=0)
-DC.Date(date,50,BaseBackColor)
-date.place(x=665,y=235)
+date = tk.LabelFrame(root,width=555, height=100,bg=BaseBackColor,bd=0)
+DC.Date(date,90,BaseBackColor)
+date.place(x=1350,y=385)
 
-second= tk.LabelFrame(root,width=75, height=55,bg=BaseBackColor,bd=0)
-DC.Second(second,50,BaseBackColor)
-second.place(x=930,y=165)
+second= tk.LabelFrame(root,width=125, height=95,bg=BaseBackColor,bd=0)
+DC.Second(second,100,BaseBackColor)
+second.place(x=1725,y=270)
 
-temp= tk.LabelFrame(root,width=240, height=110,bg=BaseBackColor,bd=0)
-weather.temp(temp,100,BaseBackColor)
-temp.place(x=520,y=465)
+temp= tk.LabelFrame(root,width=425, height=190,bg=BaseBackColor,bd=0)
+weather.temp(temp,200,BaseBackColor)
+temp.place(x=1015,y=810)
 
-place= tk.LabelFrame(root,width=440, height=40,bg=BaseBackColor,bd=0)
-weather.place(place,30,BaseBackColor)
-place.place(x=520,y=345)
+place= tk.LabelFrame(root,width=910, height=75,bg=BaseBackColor,bd=0)
+weather.place(place,60,BaseBackColor)
+place.place(x=985,y=515)
 
-condition= tk.LabelFrame(root,width=240, height=45,bg=BaseBackColor,bd=0)
-weather.condition(condition,30,BaseBackColor)
-condition.place(x=765,y=400)
+condition= tk.LabelFrame(root,width=495, height=90,bg=BaseBackColor,bd=0)
+weather.condition(condition,80,BaseBackColor)
+condition.place(x=1335,y=620)
 
-maxtemp= tk.LabelFrame(root,width=155, height=35,bg=BaseBackColor,bd=0)
-weather.MaxTemp(maxtemp,35,BaseBackColor)
-maxtemp.place(x=790,y=465)
+maxtemp= tk.LabelFrame(root,width=360, height=85,bg=BaseBackColor,bd=0)
+weather.MaxTemp(maxtemp,80,BaseBackColor)
+maxtemp.place(x=1560,y=745)
 
-lowtemp= tk.LabelFrame(root,width=155, height=35,bg=BaseBackColor,bd=0)
-weather.LowTemp(lowtemp,35,BaseBackColor)
-lowtemp.place(x=790,y=510)
+lowtemp= tk.LabelFrame(root,width=360, height=85,bg=BaseBackColor,bd=0)
+weather.LowTemp(lowtemp,80,BaseBackColor)
+lowtemp.place(x=1560,y=855)
 
-humidity= tk.LabelFrame(root,width=155, height=35,bg=BaseBackColor,bd=0)
-weather.humidity(humidity,35,BaseBackColor)
-humidity.place(x=790,y=550)
+humidity= tk.LabelFrame(root,width=360, height=85,bg=BaseBackColor,bd=0)
+weather.humidity(humidity,80,BaseBackColor)
+humidity.place(x=1560,y=960)
 
-RoTemp= tk.LabelFrame(root,width=185, height=50,bg=BaseBackColor,bd=0)
-room.Temp(RoTemp,35,BaseBackColor)
-RoTemp.place(x=110,y=480)
+RoTemp= tk.LabelFrame(root,width=400, height=100,bg=BaseBackColor,bd=0)
+room.Temp(RoTemp,90,BaseBackColor)
+RoTemp.place(x=150,y=810)
 
-RoHum= tk.LabelFrame(root,width=185, height=50,bg=BaseBackColor,bd=0)
-room.Hum(RoHum,35,BaseBackColor)
-RoHum.place(x=110,y=540)
+RoHum= tk.LabelFrame(root,width=400, height=100,bg=BaseBackColor,bd=0)
+room.Hum(RoHum,90,BaseBackColor)
+RoHum.place(x=150,y=930)
 
 
 wea = weather.reload()
