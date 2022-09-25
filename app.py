@@ -7,7 +7,7 @@ import room
 BaseBackColor = "black"
 
 root = tk.Tk()
-root.geometry("1920x1080")
+root.geometry("1024x600")
 menubar = tk.Menu(root)
 root.configure(menu = menubar,bg=BaseBackColor)
 filemenu = tk.Menu(menubar, tearoff = 0)
@@ -18,33 +18,33 @@ filemenu.add_command(label = "Open File...")
 filemenu.add_separator()
 filemenu.add_command(label = "Exit", command = lambda: root.destroy())
 
-calender = tk.LabelFrame(root,width=720, height=635,bg=BaseBackColor,bd=0)
+calender = tk.LabelFrame(root,width=420, height=360,bg=BaseBackColor,bd=0)
 CL.calender(calender,40,BaseBackColor)
-calender.place(x=50,y=30)
+calender.place(x=35,y=15)
 
-time = tk.LabelFrame(root,width=815, height=280,bg=BaseBackColor,bd=0)
+time = tk.LabelFrame(root,width=445, height=150,bg=BaseBackColor,bd=0)
 DC.Time(time,320,BaseBackColor)
-time.place(x=915,y=80)
+time.place(x=470,y=40)
 
-date = tk.LabelFrame(root,width=555, height=100,bg=BaseBackColor,bd=0)
+date = tk.LabelFrame(root,width=330, height=65,bg=BaseBackColor,bd=0)
 DC.Date(date,90,BaseBackColor)
-date.place(x=1350,y=385)
+date.place(x=670,y=240)
 
-second= tk.LabelFrame(root,width=125, height=95,bg=BaseBackColor,bd=0)
+second= tk.LabelFrame(root,width=75, height=60,bg=BaseBackColor,bd=0)
 DC.Second(second,100,BaseBackColor)
-second.place(x=1725,y=270)
+second.place(x=925,y=135)
 
-temp= tk.LabelFrame(root,width=425, height=190,bg=BaseBackColor,bd=0)
+temp= tk.LabelFrame(root,width=230, height=105,bg=BaseBackColor,bd=0)
 weather.temp(temp,200,BaseBackColor)
-temp.place(x=1015,y=810)
+temp.place(x=530,y=485)
 
-place= tk.LabelFrame(root,width=910, height=75,bg=BaseBackColor,bd=0)
+place= tk.LabelFrame(root,width=450, height=40,bg=BaseBackColor,bd=0)
 weather.place(place,60,BaseBackColor)
-place.place(x=985,y=515)
+place.place(x=915,y=350)
 
-condition= tk.LabelFrame(root,width=495, height=90,bg=BaseBackColor,bd=0)
+condition= tk.LabelFrame(root,width=260, height=50,bg=BaseBackColor,bd=0)
 weather.condition(condition,80,BaseBackColor)
-condition.place(x=1335,y=620)
+condition.place(x=760,y=400)
 
 maxtemp= tk.LabelFrame(root,width=360, height=85,bg=BaseBackColor,bd=0)
 weather.MaxTemp(maxtemp,80,BaseBackColor)
