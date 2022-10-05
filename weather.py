@@ -54,8 +54,8 @@ class reload:
     def min(self):
         Temple["text"]=GetWea().find(class_=re.compile("CurrentConditions--tempValue--3a50n")).contents[0]+"C"
         Condition["text"]=GetWea().find(class_=re.compile("CurrentConditions--phraseValue--2Z18W")).contents[0]
-        maxtemp["text"]="最高:"+str(GetApi()["daily"][0]["temp"]["max"])+ "℃"
-        lowtemp["text"]="最低:"+str(GetApi()["daily"][0]["temp"]["min"])+ "℃"
+        #maxtemp["text"]="最高:"+str(GetApi()["daily"][0]["temp"]["max"])+ "℃"
+        #lowtemp["text"]="最低:"+str(GetApi()["daily"][0]["temp"]["min"])+ "℃"
         currenthumidity["text"]="湿度:"+str(GetApi()["current"]["humidity"])+ "%"
     def second(self):
         None
